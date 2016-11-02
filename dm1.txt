@@ -1,0 +1,15 @@
+a<-runif(100,1,100)
+b<-sort(a)
+n=100
+temp=seq(1, n, by = 10)  
+bins=n/10
+i=1
+
+for (i in temp)
+{
+  b=a[i:bins]
+  m=mean(b)
+  b=rep(m,(n/4))
+  cat("bins=",b,"\n")
+  bins=bins+4
+}  
